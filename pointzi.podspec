@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.author              = { 'Supporter' => 'support@streethawk.com' }
   s.documentation_url   = 'http://streethawksdk.github.io/ios/'
 
-  s.source              = { :git => https://github.com/StreetHawkSDK/pointzi_ios', :tag => s.version.to_s, :submodules => true }
+  s.source              = { :git => 'https://github.com/StreetHawkSDK/pointzi_ios.git', :tag => s.version.to_s, :submodules => true }
   s.platform            = :ios, '8.0'
   s.requires_arc        = true
   
