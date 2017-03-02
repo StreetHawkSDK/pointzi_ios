@@ -1,0 +1,6 @@
+
+target 'PointziDemo' do
+  
+  pod "pointzi", :path => "../"
+
+end
