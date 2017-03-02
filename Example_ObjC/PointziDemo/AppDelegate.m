@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import <StreetHawkCore/StreetHawkCore.h>
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [StreetHawk registerInstallForApp:@"SHTestPointzi_zebra" withDebugMode:YES];
+    
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"tagged"])
+    {
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        NSString *cuid = [NSString stringWithFormat:@"demo_%@", [dateFormat stringFromDate:[NSDate date]]];
+        [StreetHawk tagCuid:cuid];
+        
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"tagged"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
     return YES;
 }
 

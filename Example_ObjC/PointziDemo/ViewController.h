@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import <StreetHawkCore/StreetHawkCore.h>
+
+@interface ViewController : StreetHawkBaseViewController
 
 
 @end
