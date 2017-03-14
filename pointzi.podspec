@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name                = "pointzi"
-  s.version             = "0.1.1"
+  s.version             = "0.1.2"
   s.summary             = "Pointzi module."
   s.description         = <<-DESC
                             Pointzi is an excellent SDK for you to create an experiment.
                             DESC
-  s.homepage            = "https://george.pointzi.com"
+  s.homepage            = "https://edward.pointzi.com"
   s.screenshots         = [ ]
   s.license             = 'LGPL'
   s.author              = { 'Supporter' => 'support@streethawk.com' }
@@ -23,6 +23,8 @@ Pod::Spec.new do |s|
   s.public_header_files = 'Pointzi/Headers/*.h'
   s.vendored_libraries 	= 'Pointzi/libPointzi.a'
   s.resource_bundles    = {'Pointzi' => ['Pointzi/Assets/**/*']}
-  s.dependency            'streethawk/Feed'
+  
+  s.frameworks          = 'CoreTelephony', 'Foundation', 'CoreGraphics', 'UIKit', 'CoreSpotlight'
+  s.libraries           = 'sqlite3'
   
 end
