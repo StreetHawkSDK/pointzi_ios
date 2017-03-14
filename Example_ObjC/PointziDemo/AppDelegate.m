@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import <StreetHawkCore/StreetHawkCore.h>
+#import "StreetHawkCore_Pointzi.h"
 
 @interface AppDelegate ()
 

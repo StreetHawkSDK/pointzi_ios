@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import <StreetHawkCore/StreetHawkCore.h>
+#import "StreetHawkCore_Pointzi.h"
 
 @interface ViewController : StreetHawkBaseViewController
 
