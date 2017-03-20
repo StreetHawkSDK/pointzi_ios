@@ -161,6 +161,26 @@ typedef enum SHTipAnimation SHTipAnimation;
  */
 @property (nonatomic) CGFloat tipPaddingRight;
 
+/*
+ The tip's top margin.
+*/
+@property (nonatomic) CGFloat tipMarginTop;
+
+/**
+ The tip's left margin.
+ */
+@property (nonatomic) CGFloat tipMarginLeft;
+
+/**
+ The tip's bottom margin.
+ */
+@property (nonatomic) CGFloat tipMarginBottom;
+
+/**
+ The tip's right margin.
+ */
+@property (nonatomic) CGFloat tipMarginRight;
+
 /**
  The tip's box shadow.
  */
@@ -252,6 +272,26 @@ typedef enum SHTipAnimation SHTipAnimation;
 @property (nonatomic) CGFloat titlePaddingRight;
 
 /**
+ The title's top margin.
+ */
+@property (nonatomic) CGFloat titleMarginTop;
+
+/**
+ The title's left margin.
+ */
+@property (nonatomic) CGFloat titleMarginLeft;
+
+/**
+ The title's bottom margin.
+ */
+@property (nonatomic) CGFloat titleMarginBottom;
+
+/**
+ The title's right margin.
+ */
+@property (nonatomic) CGFloat titleMarginRight;
+
+/**
  The title's box shadow.
  */
 @property (nonatomic) NSInteger titleBoxShadow;
@@ -310,6 +350,26 @@ typedef enum SHTipAnimation SHTipAnimation;
  The content's right padding.
  */
 @property (nonatomic) CGFloat contentPaddingRight;
+
+/**
+ The content's top margin.
+ */
+@property (nonatomic) CGFloat contentMarginTop;
+
+/**
+ The content's left margin.
+ */
+@property (nonatomic) CGFloat contentMarginLeft;
+
+/**
+ The content's bottom margin.
+ */
+@property (nonatomic) CGFloat contentMarginBottom;
+
+/**
+ The content's right margin.
+ */
+@property (nonatomic) CGFloat contentMarginRight;
 
 /**
  The content's box shadow.
@@ -382,6 +442,26 @@ typedef enum SHTipAnimation SHTipAnimation;
 @property (nonatomic) CGFloat buttonPrevPaddingRight;
 
 /**
+ The buttonPrev's top margin.
+ */
+@property (nonatomic) CGFloat buttonPrevMarginTop;
+
+/**
+ The buttonPrev's left margin.
+ */
+@property (nonatomic) CGFloat buttonPrevMarginLeft;
+
+/**
+ The buttonPrev's bottom margin.
+ */
+@property (nonatomic) CGFloat buttonPrevMarginBottom;
+
+/**
+ The buttonPrev's right margin.
+ */
+@property (nonatomic) CGFloat buttonPrevMarginRight;
+
+/**
  The buttonPrev's box shadow.
  */
 @property (nonatomic) NSInteger buttonPrevBoxShadow;
@@ -447,6 +527,26 @@ typedef enum SHTipAnimation SHTipAnimation;
 @property (nonatomic) CGFloat buttonNextPaddingRight;
 
 /**
+ The buttonNext's top margin.
+ */
+@property (nonatomic) CGFloat buttonNextMarginTop;
+
+/**
+ The buttonNext's left margin.
+ */
+@property (nonatomic) CGFloat buttonNextMarginLeft;
+
+/**
+ The buttonNext's bottom margin.
+ */
+@property (nonatomic) CGFloat buttonNextMarginBottom;
+
+/**
+ The buttonNext's right margin.
+ */
+@property (nonatomic) CGFloat buttonNextMarginRight;
+
+/**
  The buttonNext's box shadow.
  */
 @property (nonatomic) NSInteger buttonNextBoxShadow;
@@ -510,6 +610,26 @@ typedef enum SHTipAnimation SHTipAnimation;
  The dismiss button's right padding.
  */
 @property (nonatomic) CGFloat buttonDismissPaddingRight;
+
+/**
+ The dismiss button's top margin.
+ */
+@property (nonatomic) CGFloat buttonDismissMarginTop;
+
+/**
+ The dismiss button's left margin.
+ */
+@property (nonatomic) CGFloat buttonDismissMarginLeft;
+
+/**
+ The dismiss button's bottom margin.
+ */
+@property (nonatomic) CGFloat buttonDismissMarginBottom;
+
+/**
+ The dismiss button's right margin.
+ */
+@property (nonatomic) CGFloat buttonDismissMarginRight;
 
 /**
  The dismiss button's color.
@@ -656,6 +776,26 @@ typedef enum SHTipAnimation SHTipAnimation;
  The trigger is launcher, and its indicator's right padding.
  */
 @property (nonatomic) CGFloat launcherPaddingRight;
+
+/**
+ The trigger is launcher, and its indicator's top margin.
+ */
+@property (nonatomic) CGFloat launcherMarginTop;
+
+/**
+ The trigger is launcher, and its indicator's left margin.
+ */
+@property (nonatomic) CGFloat launcherMarginLeft;
+
+/**
+ The trigger is launcher, and its indicator's bottom margin.
+ */
+@property (nonatomic) CGFloat launcherMarginBottom;
+
+/**
+ The trigger is launcher, and its indicator's right margin.
+ */
+@property (nonatomic) CGFloat launcherMarginRight;
 
 /**
  View controller of starting target page.
