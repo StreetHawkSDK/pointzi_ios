@@ -184,7 +184,7 @@ typedef enum SHTipAnimation SHTipAnimation;
 /**
  The tip's box shadow.
  */
-@property (nonatomic) NSInteger tipBoxShadow;
+@property (nonatomic) CGFloat tipBoxShadow;
 
 /**
  The tip's template. //TODO: change to enum
@@ -294,7 +294,7 @@ typedef enum SHTipAnimation SHTipAnimation;
 /**
  The title's box shadow.
  */
-@property (nonatomic) NSInteger titleBoxShadow;
+@property (nonatomic) CGFloat titleBoxShadow;
 
 /**
  The title's font name.
@@ -374,7 +374,7 @@ typedef enum SHTipAnimation SHTipAnimation;
 /**
  The content's box shadow.
  */
-@property (nonatomic) NSInteger contentBoxShadow;
+@property (nonatomic) CGFloat contentBoxShadow;
 
 /**
  The content's font name.
@@ -464,7 +464,7 @@ typedef enum SHTipAnimation SHTipAnimation;
 /**
  The buttonPrev's box shadow.
  */
-@property (nonatomic) NSInteger buttonPrevBoxShadow;
+@property (nonatomic) CGFloat buttonPrevBoxShadow;
 
 /**
  The buttonPrev's font name.
@@ -549,7 +549,7 @@ typedef enum SHTipAnimation SHTipAnimation;
 /**
  The buttonNext's box shadow.
  */
-@property (nonatomic) NSInteger buttonNextBoxShadow;
+@property (nonatomic) CGFloat buttonNextBoxShadow;
 
 /**
  The buttonNext's font name.
