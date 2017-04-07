@@ -187,11 +187,6 @@ typedef enum SHTipAnimation SHTipAnimation;
 @property (nonatomic) CGFloat tipBoxShadow;
 
 /**
- The tip's template. //TODO: change to enum
- */
-@property (nonatomic) NSInteger templateCode;
-
-/**
  Background of the tip.
  */
 @property (nonatomic, strong) UIColor *backgroundColor;
