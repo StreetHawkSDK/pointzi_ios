@@ -79,20 +79,80 @@ enum SHTipTrigger
 typedef enum SHTipTrigger SHTipTrigger;
 
 /**
- The supported animation of the tip.
+ The supported animation type of the tip.
  */
-enum SHTipAnimation
+enum SHTipAnimationType
 {
     /**
      No animation.
      */
-    SHTipAnimation_None = 0,
+    SHTipAnimationType_None = 0,
     /**
-     Pop animation
+     Fade animation, in out out.
      */
-    SHTipAnimation_Pop = 1,
+    SHTipAnimationType_Fade = 1,
+    /**
+     Slide animation, in out out.
+     */
+    SHTipAnimationType_Slide = 2,
+    /**
+     Explode animation, in only.
+     */
+    SHTipAnimationType_Explode = 3,
+    /**
+     Compress animation, out only.
+     */
+    SHTipAnimationType_Compress = 4,
 };
-typedef enum SHTipAnimation SHTipAnimation;
+typedef enum SHTipAnimationType SHTipAnimationType;
+
+/**
+ The supported animation direction.
+ */
+enum SHTipAnimationDirection
+{
+    /**
+     Unknown direction.
+     */
+    SHTipAnimationDirection_Unknown = 0,
+    /**
+     Left direction.
+     */
+    SHTipAnimationDirection_Left = 1,
+    /**
+     Top direction.
+     */
+    SHTipAnimationDirection_Top = 2,
+    /**
+     Right direction.
+     */
+    SHTipAnimationDirection_Right = 3,
+    /**
+     Bottom direction.
+     */
+    SHTipAnimationDirection_Bottom = 4,
+};
+typedef enum SHTipAnimationDirection SHTipAnimationDirection;
+
+/**
+ The display type of tip.
+ */
+enum SHTipDisplayType
+{
+    /**
+     Dom type.
+     */
+    SHTipDisplayType_Dom = 1 << 0,
+    /**
+     Faq type.
+     */
+    SHTipDisplayType_Faq = 1 << 1,
+    /**
+     Feed type.
+     */
+    SHTipDisplayType_Feed = 1 << 2,
+};
+typedef enum SHTipDisplayType SHTipDisplayType;
 
 @class SHTipSeries;
 
@@ -412,6 +472,21 @@ typedef enum SHTipAnimation SHTipAnimation;
 @property (nonatomic, strong) UIColor *buttonPrevBackgroundColor;
 
 /**
+ button Prev border color.
+ */
+@property (nonatomic, strong) UIColor *buttonPrevBorderColor;
+
+/**
+ button Prev border width.
+ */
+@property (nonatomic) CGFloat buttonPrevBorderWidth;
+
+/**
+ button Prev border corner radius.
+ */
+@property (nonatomic) CGFloat buttonPrevBorderCornerRadius;
+
+/**
  button Prev alignment of the tip.
  */
 @property (nonatomic) NSTextAlignment buttonPrevAlignment;
@@ -495,6 +570,21 @@ typedef enum SHTipAnimation SHTipAnimation;
  button Next background color of the tip.
  */
 @property (nonatomic, strong) UIColor *buttonNextBackgroundColor;
+
+/**
+ button Next border color.
+ */
+@property (nonatomic, strong) UIColor *buttonNextBorderColor;
+
+/**
+ button Next border width.
+ */
+@property (nonatomic) CGFloat buttonNextBorderWidth;
+
+/**
+ button Next border corner radius.
+ */
+@property (nonatomic) CGFloat buttonNextBorderCornerRadius;
 
 /**
  button Next alignment of the tip.
@@ -637,6 +727,21 @@ typedef enum SHTipAnimation SHTipAnimation;
 @property (nonatomic, strong) UIColor *buttonDismissBackgroundColor;
 
 /**
+ The dismiss button's border color.
+ */
+@property (nonatomic, strong) UIColor *buttonDismissBorderColor;
+
+/**
+ The dismiss button's border width.
+ */
+@property (nonatomic) CGFloat buttonDismissBorderWidth;
+
+/**
+ The dismiss button's corner radius.
+ */
+@property (nonatomic) CGFloat buttonDismissBorderCornerRadius;
+
+/**
  Button for positive on delete confirm dialog, which is on the left.
  */
 @property (nonatomic, strong) NSString *dismissB1;
@@ -665,6 +770,36 @@ typedef enum SHTipAnimation SHTipAnimation;
  Whether dismiss the tip (equal next button is clicked) when touching outside of the tip.
  */
 @property (nonatomic) BOOL dismissWhenTouchOutside;
+
+/**
+ Animation type when transition in
+ */
+@property (nonatomic) SHTipAnimationType transitionInType;
+
+/**
+ Animation duration when transition in
+ */
+@property (nonatomic) CGFloat transitionInDuration;
+
+/**
+ Animation direction when transition in
+ */
+@property (nonatomic) SHTipAnimationDirection transitionInDirection;
+
+/**
+ Animation type when transition out
+ */
+@property (nonatomic) SHTipAnimationType transitionOutType;
+
+/**
+ Animation duration when transition out
+ */
+@property (nonatomic) CGFloat transitionOutDuration;
+
+/**
+ Animation direction when transition out
+ */
+@property (nonatomic) SHTipAnimationDirection transitionOutDirection;
 
 /**
  Weak reference to containing series. This is assigned when a tip is added into a series.
@@ -706,6 +841,11 @@ typedef enum SHTipAnimation SHTipAnimation;
  Representing a series of tips.
  */
 @interface SHTipSeries : NSObject
+
+/**
+ Display type of current tip series.
+ */
+@property (nonatomic) SHTipDisplayType tipDisplayType;
 
 /**
  Type of current tip series.
@@ -833,6 +973,13 @@ typedef enum SHTipAnimation SHTipAnimation;
 @interface SHTipUtil : NSObject
 
 /**
+ Convert array to tip display type.
+ @param array The array read from feed json. It's element is string and predefined, such as: dom, faq, feed.
+ @return If match predefined string, return the enum; otherwise return zero.
+ */
++ (SHTipDisplayType)convertTipDisplayTypeFromArray:(NSArray *)array;
+
+/**
  Convert string to tip type.
  @param strTool The string read from feed json. It's predefined, such as: tour, tip, modal.
  @return If match predefined string, return the enum; otherwise return unknown.
@@ -852,6 +999,20 @@ typedef enum SHTipAnimation SHTipAnimation;
  @return If match predefined string, return the enum; otherwise return auto.
  */
 + (SHTipPlacement)convertPlacementTypeFromString:(NSString *)strPlacement;
+
+/**
+ Convert string to tip animation type.
+ @param strType The string read from feed json. It's predefined, such as: fade, slide.
+ @return If match predefined string, return the enum; otherwise return none.
+ */
++ (SHTipAnimationType)convertTipAnimationTypeFromString:(NSString *)strType;
+
+/**
+ Convert string to tip animation direction.
+ @param strDirection The string read from feed json. It's predefined, such as: left, top.
+ @return If match predefined string, return the enum; otherwise return unknown.
+ */
++ (SHTipAnimationDirection)convertTipAnimationDirectionFromString:(NSString *)strDirection;
 
 /**
  Convert string to alignment type.
