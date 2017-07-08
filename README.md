@@ -15,13 +15,13 @@ Support iOS 8.0 and above.
 
 ## Pointzi web console
 
-Register App on [Pointzi web console](https://edward.pointzi.com/). 
+Register App on [Pointzi web console](https://dashboard.pointzi.com/). 
 
-More documents on [StreetHawk freshdesk](https://streethawk.freshdesk.com/helpdesk). 
+[Additional documentation](https://pointzi.freshdesk.com). 
 
 ## Author
 
-support@streethawk.com
+support@pointzi.com
 
 ## License
 
