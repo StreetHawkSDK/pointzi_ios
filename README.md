@@ -1,8 +1,8 @@
 # Pointzi iOS SDK
 
-[![Version](https://img.shields.io/cocoapods/v/streethawk.svg?style=flat)](http://cocoadocs.org/docsets/pointzi)
-[![License](https://img.shields.io/cocoapods/l/streethawk.svg?style=flat)](http://cocoadocs.org/docsets/pointzi)
-[![Platform](https://img.shields.io/cocoapods/p/streethawk.svg?style=flat)](http://cocoadocs.org/docsets/pointzi)
+[![Version](https://img.shields.io/cocoapods/v/pointzi.svg?style=flat)](http://cocoadocs.org/docsets/pointzi)
+[![License](https://img.shields.io/cocoapods/l/pointzi.svg?style=flat)](http://cocoadocs.org/docsets/pointzi)
+[![Platform](https://img.shields.io/cocoapods/p/pointzi.svg?style=flat)](http://cocoadocs.org/docsets/pointzi)
 
 Support iOS 8.0 and above.
 
