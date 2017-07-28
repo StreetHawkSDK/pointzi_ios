@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [StreetHawk registerInstallForApp:@"SHTestPointzi_zebra" withDebugMode:YES];
+    [StreetHawk registerInstallForApp:@"SHTestPointzi_bison" withDebugMode:YES];
     
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"tagged"])
     {
