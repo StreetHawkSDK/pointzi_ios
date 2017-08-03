@@ -662,6 +662,11 @@ typedef enum SHTipDisplayType SHTipDisplayType;
 @property (nonatomic, strong) NSString *pair;
 
 /**
+ Whether buttons layout horizontal.
+ */
+@property (nonatomic) BOOL isHorizontal;
+
+/**
  Dismiss button image resource name. It's built inside App's resource bundle. If the file name in payload has no extension, use ***.png.
  */
 @property (nonatomic, strong) NSString * buttonDismissIcon;
@@ -941,6 +946,11 @@ typedef enum SHTipDisplayType SHTipDisplayType;
  Target element's reference name or display name, for example: "btnLogin" or "Log in".
  */
 @property (nonatomic, strong) NSString *target;
+
+/**
+ Only used for child element such as a cell in table. It's the child element's index.
+ */
+@property (nonatomic, strong) NSIndexPath *childIndex;
 
 /**
  Array of the series.
