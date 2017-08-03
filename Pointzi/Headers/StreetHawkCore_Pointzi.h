@@ -25,14 +25,6 @@ FOUNDATION_EXPORT const unsigned char StreetHawkCore_PointziVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <StreetHawkCore_Pointzi/PublicHeader.h>
 
-#import "PushDataForApplication.h"
-#import "SHApp.h"
-#import "SHBaseViewController.h"
-#import "SHFriendlyNameObject.h"
-#import "SHInstall.h"
-#import "SHObject.h"
-#import "SHTypes.h"
+#import <StreetHawkCore/StreetHawkCore.h>
 
-#import "SHApp+Pointzi.h"
 #import "SHTip.h"
-#import "SHPointzi.h"

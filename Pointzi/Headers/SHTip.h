@@ -51,8 +51,52 @@ enum SHTipType
      A modal page.
      */
     SHTipType_Modal = 3,
+    /**
+     A coach mark page.
+     */
+    SHTipType_CoachMark = 4,
 };
 typedef enum SHTipType SHTipType;
+
+/**
+ Coach mark highlight style
+ */
+enum SHCoachMarkStyle
+{
+    /**
+     Highlight is a circle cover target control.
+     */
+    SHCoachMarkStyle_circular = 1,
+    /**
+     Highlight is a rectangle cover target control.
+     */
+    SHCoachMarkStyle_rectangular = 2,
+    /**
+     Highlight is a custom rectangle cover target control locating center.
+     */
+    SHCoachMarkStyle_custom = 3,
+};
+typedef enum SHCoachMarkStyle SHCoachMarkStyle;
+
+/**
+ Coach mark diffuse.
+ */
+enum SHCoachMarkDiffuse
+{
+    /**
+     None diffuse.
+     */
+    SHCoachMarkDiffuse_none = 0,
+    /**
+     Diffuse is gradient.
+     */
+    SHCoachMarkDiffuse_gradient = 1,
+    /**
+     Diffuse is blur.
+     */
+    SHCoachMarkDiffuse_blur = 2,
+};
+typedef enum SHCoachMarkDiffuse SHCoachMarkDiffuse;
 
 /**
  How should the tip appear.
@@ -285,6 +329,31 @@ typedef enum SHTipDisplayType SHTipDisplayType;
  The transparency of the overlay.
  */
 @property (nonatomic) CGFloat overlayAlpha;
+
+/**
+ The highlight style of coach mark.
+ */
+@property (nonatomic) SHCoachMarkStyle coachmarkStyle;
+
+/**
+ The highlight corner radius of coach mark.
+ */
+@property (nonatomic) CGFloat coachmarkCornerRadius;
+
+/**
+ The highlight width of coach mark.
+ */
+@property (nonatomic) CGFloat coachmarkWidth;
+
+/**
+ The highlight height of coach mark.
+ */
+@property (nonatomic) CGFloat coachmarkHeight;
+
+/**
+ The diffuse of coach mark.
+ */
+@property (nonatomic) SHCoachMarkDiffuse coachmarkDiffuse;
 
 /**
  Title of the tip.
@@ -1030,6 +1099,10 @@ typedef enum SHTipDisplayType SHTipDisplayType;
  @return If match predefined string, return the enum; otherwise return left.
  */
 + (NSTextAlignment)convertTextAlignmentFromString:(NSString *)strAlignment;
+
++ (SHCoachMarkStyle)convertCoachmarkStyleFromString:(NSString *)strCoachmarkStyle;
+
++ (SHCoachMarkDiffuse)convertCoachmarkDiffuseFromString:(NSString *)strCoachmarkDiffuse;
 
 /**
  Convert string to real icon file name.

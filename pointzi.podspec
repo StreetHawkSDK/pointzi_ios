@@ -26,4 +26,7 @@ Pod::Spec.new do |s|
   s.frameworks          = 'CoreTelephony', 'Foundation', 'CoreGraphics', 'UIKit', 'CoreSpotlight'
   s.libraries           = 'sqlite3'
   
+  s.dependency 'streethawk/Core'
+  s.dependency 'streethawk/Feed'
+  
 end
