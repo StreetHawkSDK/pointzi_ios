@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.description         = <<-DESC
                             Pointzi is an excellent SDK for you to create an experiment.
                             DESC
-  s.homepage            = "https://edward.pointzi.com"
+  s.homepage            = "https://dashboard.pointzi.com"
   s.screenshots         = [ ]
   s.license             = 'LGPL'
   s.author              = { 'Supporter' => 'support@streethawk.com' }
