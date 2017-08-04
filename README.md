@@ -29,6 +29,12 @@ The Pointzi iOS SDK is available under the LGPL license. See the LICENSE file fo
 
 ## Release Notes
 
+Version Number   : 1.0.3
+
+Release Date     : 4-August-2017
+
+1. Fix navigation button order change when navigating back and forth.
+
 Version Number   : 1.0.2
 
 Release Date     : 3-August-2017
