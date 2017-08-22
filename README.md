@@ -29,6 +29,12 @@ The Pointzi iOS SDK is available under the LGPL license. See the LICENSE file fo
 
 ## Release Notes
 
+Version Number   : 1.0.5
+
+Release Date     : 22-August-2017
+
+1. Pointzi is compatible with StreetHawk pod.
+
 Version Number   : 1.0.4
 
 Release Date     : 22-August-2017
