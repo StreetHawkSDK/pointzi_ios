@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                = "pointzi"
-  s.version             = "1.0.3"
+  s.version             = "1.0.4"
   s.summary             = "Pointzi module."
   s.description         = <<-DESC
                             Pointzi is an excellent SDK for you to create an experiment.
@@ -25,5 +25,9 @@ Pod::Spec.new do |s|
   
   s.frameworks          = 'CoreTelephony', 'Foundation', 'CoreGraphics', 'UIKit', 'CoreSpotlight'
   s.libraries           = 'sqlite3'
+  
+  s.dependency 'streethawk/Core'
+  s.dependency 'streethawk/Feed'
+
   
 end
