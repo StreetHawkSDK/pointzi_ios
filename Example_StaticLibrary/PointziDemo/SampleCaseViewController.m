@@ -33,7 +33,7 @@
     {
         //use array instead of dictionary as NSDictionary.allKeys cannot keep order.
         self.arraySampleCasesTitle = [NSMutableArray arrayWithArray:@[@"Pointzi", @"Feedback Sample", @"Tag & Log Sample", @"Feeds Sample", @"Install Sample", @"Swift Sample"]];
-        self.arraySampleCasesVC = [NSMutableArray arrayWithArray:@[@"PointziViewController", @"FeedbackCasesViewController", @"LogTagCasesViewController", @"FeedCasesController", @"InstallCasesViewController", @"SwiftViewController"]];
+        self.arraySampleCasesVC = [NSMutableArray arrayWithArray:@[@"PointziViewController", @"FeedbackCasesViewController", @"LogTagCasesViewController", @"FeedCasesController", @"InstallViewController", @"SwiftViewController"]];
     }
     return self;
 }
