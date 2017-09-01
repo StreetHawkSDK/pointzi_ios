@@ -43,10 +43,11 @@
 		4D29015D1F5912DE00C0DFE1 /* VarietyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D29013E1F5912DE00C0DFE1 /* VarietyViewController.m */; };
 		4D29015E1F5912DE00C0DFE1 /* VarietyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D29013F1F5912DE00C0DFE1 /* VarietyViewController.xib */; };
 		4D2901651F59361200C0DFE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D2901601F59361200C0DFE1 /* Assets.xcassets */; };
-		4D2901661F59361200C0DFE1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D2901611F59361200C0DFE1 /* Info.plist */; };
 		4D2901671F59361200C0DFE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D2901621F59361200C0DFE1 /* LaunchScreen.storyboard */; };
 		4D2901681F59361200C0DFE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2901631F59361200C0DFE1 /* main.m */; };
 		4D2901691F59361200C0DFE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D2901641F59361200C0DFE1 /* Main.storyboard */; };
+		4D2901711F59470000C0DFE1 /* PaperOnboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D29010D1F590F8F00C0DFE1 /* PaperOnboarding.framework */; };
+		4D2901721F59470000C0DFE1 /* PaperOnboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D29010D1F590F8F00C0DFE1 /* PaperOnboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4DBB78131F56A5B600197511 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBB77FA1F56A5B600197511 /* SwiftViewController.swift */; };
 		4DBB78141F56A5B600197511 /* SwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DBB77FB1F56A5B600197511 /* SwiftViewController.xib */; };
 		4DBB78151F56A5B600197511 /* InstallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBB77FE1F56A5B600197511 /* InstallViewController.m */; };
@@ -70,7 +71,28 @@
 			remoteGlobalIDString = 845C48BF1CFDB2F7002BE949;
 			remoteInfo = PaperOnboarding;
 		};
+		4D2901731F59470000C0DFE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D2901081F590F8F00C0DFE1 /* PaperOnboardingDemo.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 845C48BE1CFDB2F7002BE949;
+			remoteInfo = PaperOnboarding;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4D2901751F59470100C0DFE1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4D2901721F59470000C0DFE1 /* PaperOnboarding.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4CBBBC621E5847D70004CF56 /* PointziDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PointziDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D2901711F59470000C0DFE1 /* PaperOnboarding.framework in Frameworks */,
 				0D3D08D30F942A8DA00D444C /* libPods-PointziDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,10 +427,12 @@
 				4CBBBC601E5847D70004CF56 /* Resources */,
 				0DDD3CA7B55AA8DAADD9A94A /* [CP] Embed Pods Frameworks */,
 				2BADC5722D50A488E7C3093F /* [CP] Copy Pods Resources */,
+				4D2901751F59470100C0DFE1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4D2901741F59470000C0DFE1 /* PBXTargetDependency */,
 			);
 			name = PointziDemo;
 			productName = PointziDemo;
@@ -480,7 +505,6 @@
 				4D2901691F59361200C0DFE1 /* Main.storyboard in Resources */,
 				4D2901541F5912DE00C0DFE1 /* LoginViewController.xib in Resources */,
 				4D2901671F59361200C0DFE1 /* LaunchScreen.storyboard in Resources */,
-				4D2901661F59361200C0DFE1 /* Info.plist in Resources */,
 				4D2901461F5912DE00C0DFE1 /* iphone-screens-MyFeeds.png in Resources */,
 				4D29014E1F5912DE00C0DFE1 /* CollectionViewCell.xib in Resources */,
 				4D2901441F5912DE00C0DFE1 /* iphone-screens-login.png in Resources */,
@@ -591,6 +615,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4D2901741F59470000C0DFE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PaperOnboarding;
+			targetProxy = 4D2901731F59470000C0DFE1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		4CBBBC771E5847D70004CF56 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -684,9 +716,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F8633CD139017EB3CFA58185 /* Pods-PointziDemo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AG748WC3N7;
-				INFOPLIST_FILE = PointziDemo/Info.plist;
+				INFOPLIST_FILE = "PointziDemo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.streethawk.PointziDemo;
@@ -700,9 +733,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D441326464D605A3B23B599A /* Pods-PointziDemo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AG748WC3N7;
-				INFOPLIST_FILE = PointziDemo/Info.plist;
+				INFOPLIST_FILE = "PointziDemo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.streethawk.PointziDemo;
