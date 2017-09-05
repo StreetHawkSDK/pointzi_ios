@@ -33,6 +33,5 @@ FOUNDATION_EXPORT const unsigned char StreetHawkCore_PointziVersionString[];
 #import "SHObject.h"
 #import "SHTypes.h"
 
-#import "SHApp+Pointzi.h"
 #import "SHTip.h"
 #import "SHPointzi.h"
