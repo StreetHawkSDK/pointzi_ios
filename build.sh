@@ -39,7 +39,7 @@ mv $BUILD_OUTPUTS/PointziDemo.ipa $BUILD_OUTPUTS/PZStatic.ipa
 
 pushd .
 
-cd $POINTZI_POD_DIR/Example_DynamicFramework
+cd $POINTZI_LIB_PATH/Example_DynamicFramework
 
 # install third-party pods
 pod install
