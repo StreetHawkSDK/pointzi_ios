@@ -10,7 +10,6 @@ echo "==============================================================="
 echo "Copy Latest Pointzi Libs"
 
 cp -r $POINTZI_LIB_PATH/* .
-cp  $POINTZI_LIB_PATH/../ExportPlist.plist build/
 
 echo "==============================================================="
 echo "Build Pointzi demos"
@@ -33,7 +32,7 @@ xcodebuild archive -workspace PointziDemo.xcworkspace -scheme PointziDemo -archi
 popd
 
 # export ipa
-xcodebuild -exportArchive -archivePath $BUILD_OUTPUTS/PZStatic.xcarchive -exportPath $BUILD_OUTPUTS/ -exportOptionsPlist ./build/ExportPlist.plist
+xcodebuild -exportArchive -archivePath $BUILD_OUTPUTS/PZStatic.xcarchive -exportPath $BUILD_OUTPUTS/ -exportOptionsPlist ExportPlist.plist
 mv $BUILD_OUTPUTS/PointziDemo.ipa $BUILD_OUTPUTS/PZStatic.ipa
 
 # ------------------- build PZDynamic ------------------------
@@ -54,7 +53,7 @@ xcodebuild archive -workspace PointziDemo.xcworkspace -scheme PointziDemo -archi
 popd
 
 # export ipa
-xcodebuild -exportArchive -archivePath $BUILD_OUTPUTS/PZDynamic.xcarchive -exportPath $BUILD_OUTPUTS/ -exportOptionsPlist ./build/ExportPlist.plist
+xcodebuild -exportArchive -archivePath $BUILD_OUTPUTS/PZDynamic.xcarchive -exportPath $BUILD_OUTPUTS/ -exportOptionsPlist ExportPlist.plist
 mv $BUILD_OUTPUTS/PointziDemo.ipa $BUILD_OUTPUTS/PZDynamic.ipa
 
 # ---------------------- upload to hockeyapp ---------------------
