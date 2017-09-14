@@ -61,3 +61,5 @@ iOSInjectionProject/
 Podfile.lock
 Manifest.lock
 Example_ObjC/Pods
+Example_StaticLibrary/Pods
+Example_DynamicFramework/Pods
