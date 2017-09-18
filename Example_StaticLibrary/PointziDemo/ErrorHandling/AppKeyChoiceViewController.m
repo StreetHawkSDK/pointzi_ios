@@ -40,7 +40,7 @@
     self = [super initWithStyle:style];
     if (self)
     {
-        self.arrayAppKeys = @[@"PZStatic_bison", @"PZStatic_zebra"];
+        self.arrayAppKeys = @[@"PZStatic_bison", @"PZStatic_zebra", @"SHTestPointzi_bison", @"SHTestPointzi_zebra"];
     }
     return self;
 }
