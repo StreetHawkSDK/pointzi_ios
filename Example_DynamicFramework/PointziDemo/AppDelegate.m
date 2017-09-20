@@ -92,6 +92,11 @@
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+    return [Pointzi openURL:url];
+}
+
 - (void)installRegisterSuccessHandler:(NSNotification *)notification
 {
     dispatch_async(dispatch_get_main_queue(), ^
