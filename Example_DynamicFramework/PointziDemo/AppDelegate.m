@@ -16,7 +16,6 @@
  */
 
 #import "StreetHawkCore_Pointzi.h"
-#import "PZApp.h" //temp, when merge PZApp.h into StreetHawkCore_Pointzi.h, remove this line
 
 #import "AppDelegate.h"
 #import "SampleCaseViewController.h"
