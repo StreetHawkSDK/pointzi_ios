@@ -27,7 +27,7 @@
 			<string>demo</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>shtooltip</string>
+				<string>PZDynamic</string>
 			</array>
 		</dict>
 	</array>
@@ -35,6 +35,11 @@
 	<string>IOS1121_GitVersion-e1d7a67b-Wed Sep 20 14:34:28 CST 2017</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
