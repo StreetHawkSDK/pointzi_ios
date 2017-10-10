@@ -29,6 +29,16 @@ The Pointzi iOS SDK is available under the LGPL license. See the LICENSE file fo
 
 ## Release Notes
 
+Version Number   : 1.1.0
+
+Release Date     : 10-October-2017
+
+1. Easy enter/exit preview mode.
+2. Native image is supported in tip.
+3. Polling request in series queue.
+4. When show preview mode, set polling enabled by default.
+5. Launcher can be added into navigation bar.
+
 Version Number   : 1.0.7
 
 Release Date     : 5-September-2017
