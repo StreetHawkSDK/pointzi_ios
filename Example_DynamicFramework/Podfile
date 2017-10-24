@@ -1,8 +1,11 @@
+platform :ios, '8.0'
 
 use_frameworks!
 
 target 'PointziDemo' do
   
   pod "pointzi", :path => "../"
+  
+  pod "pointzi/PaperOnboarding", :path => "../"
 
 end

@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   		sp.libraries           	= 'sqlite3'
   end
 
-  s.subspec 'PaperOnBoarding' do |sp|
+  s.subspec 'PaperOnboarding' do |sp|
    		sp.platform             = :ios, '8.0'
    		sp.xcconfig             = { 'OTHER_LDFLAGS' => '$(inherited) -lObjC',
                                     'OTHER_CFLAGS' => '$(inherited) -DNS_BLOCK_ASSERTIONS=1 -DNDEBUG'
