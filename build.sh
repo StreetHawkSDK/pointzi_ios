@@ -44,7 +44,7 @@ xcodebuild archive -workspace PointziDemo.xcworkspace -scheme PointziDemo -archi
 popd
 
 # export ipa
-xcodebuild -exportArchive -archivePath $BUILD_OUTPUTS/PZStatic.xcarchive -exportPath $BUILD_OUTPUTS/ -exportOptionsPlist ExportPlist.plist -allowProvisioningUpdates
+xcodebuild -exportArchive -archivePath $BUILD_OUTPUTS/PZStatic.xcarchive -exportPath $BUILD_OUTPUTS/ -exportOptionsPlist Example_StaticLibrary/ExportOptions.plist
 mv $BUILD_OUTPUTS/PointziDemo.ipa $BUILD_OUTPUTS/PZStatic.ipa
 
 # ------------------- build PZDynamic ------------------------
@@ -65,7 +65,7 @@ xcodebuild archive -workspace PointziDemo.xcworkspace -scheme PointziDemo -archi
 popd
 
 # export ipa
-xcodebuild -exportArchive -archivePath $BUILD_OUTPUTS/PZDynamic.xcarchive -exportPath $BUILD_OUTPUTS/ -exportOptionsPlist ExportPlist.plist
+xcodebuild -exportArchive -archivePath $BUILD_OUTPUTS/PZDynamic.xcarchive -exportPath $BUILD_OUTPUTS/ -exportOptionsPlist Example_DynamicFramework/ExportOptions.plist
 mv $BUILD_OUTPUTS/PointziDemo.ipa $BUILD_OUTPUTS/PZDynamic.ipa
 
 # ---------------------- upload to hockeyapp ---------------------
