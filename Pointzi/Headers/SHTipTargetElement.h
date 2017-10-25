@@ -1,0 +1,56 @@
+/*
+ * Copyright (c) StreetHawk, All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3.0 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library.
+ */
+
+#import "SHTipBaseElement.h"
+
+//If payload's view is this, the tip can show on any page.
+#define ANY_PAGR_TOOL    @"_ALL_"
+
+@interface SHTipTargetElement : SHTipBaseElement
+
+/**
+ View controller of starting target page.
+ */
+@property (nonatomic, strong) NSString *vcClass;
+
+/**
+ Target element's reference name or display name, for example: "btnLogin" or "Log in".
+ */
+@property (nonatomic, strong) NSString *control;
+
+/**
+ Only used for child element such as a cell in table. It's the child element's index.
+ */
+@property (nonatomic) NSInteger section;
+@property (nonatomic) NSInteger row;
+
+/**
+ Calculated from section and row.
+ */
+@property (nonatomic, readonly) NSIndexPath *indexPath;
+
+/**
+ Whether the target matches the vc.
+ */
+- (BOOL)matchVC:(UIViewController *)vc;
+
+/**
+ Find target view matching this element.
+ */
+- (UIView *)findTargetInViewController:(UIViewController *)ctrl forTipPlacement:(SHTipPlacement)tipPlacement;
+
+@end
