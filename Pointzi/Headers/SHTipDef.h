@@ -34,6 +34,7 @@
 #define DEFAULT_HEIGHT              "0"
 #define DEFAULT_DIM                 0.5
 #define DEFAULT_DIM_COLOR           [UIColor colorFromHexString:@"#A9A9A9"]
+#define DEFAULT_LAUNCHER_SIZE       32
 
 /**
  Where the tip should be placed relative to UI element.
