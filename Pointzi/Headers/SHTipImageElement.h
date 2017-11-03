@@ -82,4 +82,9 @@
  */
 @property (nonatomic) CGFloat cornerRadius;
 
+/**
+ Utility function for layout this image element inside contain view.
+ */
++ (void)layoutImageElements:(NSArray<SHTipImageElement *> *)arrayImages inView:(UIView *)containView withSize:(CGSize)tipContainerSize;
+
 @end

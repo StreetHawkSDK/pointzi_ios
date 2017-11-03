@@ -41,8 +41,17 @@ FOUNDATION_EXPORT const unsigned char StreetHawkCore_PointziVersionString[];
 
 //Pointzi
 #import "PZApp.h"
-#import "SHTip.h"
 #import "SHTipBaseElement.h"
 #import "SHTipDef.h"
 #import "SHTipImageElement.h"
+#import "SHTipTextElement.h"
+#import "SHTipButtonElement.h"
+#import "SHTipWebElement.h"
+#import "SHTipDismissElement.h"
+#import "SHTipLauncherElement.h"
+#import "SHTipCoachmarkElement.h"
+#import "SHTipTargetElement.h"
+#import "SHTipElement.h"
+#import "SHTipSeriesElement.h"
+#import "SHTipAnimationElement.h"
 #import "SHPointziApi.h"

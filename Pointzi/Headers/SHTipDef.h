@@ -18,6 +18,24 @@
 #ifndef Header_h
 #define Header_h
 
+#define DEFAULT_TEXT_COLOR          [UIColor blackColor]
+#define DEFAULT_BACKGROUND_COLOR    [UIColor whiteColor]
+#define DEFAULT_PLACEMENT           SHTipPlacement_Left
+#define DEFAULT_BORDER_COLOR        DEFAULT_BACKGROUND_COLOR
+#define DEFAULT_BOXSHADOW           0
+#define DEFAULT_PADDING             0
+#define DEFAULT_MARGIN              0
+#define DEFAULT_GRAVITY             NSTextAlignmentLeft
+#define DEFAULT_FONT_SIZE           -1 //means should use system's default font size
+#define DEFAULT_DELAY               0
+#define DEFAULT_BORDER_WIDTH        0
+#define DEFAULT_CORNER_RADIUS       0
+#define DEFAULT_WIDTH               "0"
+#define DEFAULT_HEIGHT              "0"
+#define DEFAULT_DIM                 0.5
+#define DEFAULT_DIM_COLOR           [UIColor colorFromHexString:@"#A9A9A9"]
+#define DEFAULT_LAUNCHER_SIZE       32
+
 /**
  Where the tip should be placed relative to UI element.
  */

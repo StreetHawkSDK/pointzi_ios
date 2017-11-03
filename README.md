@@ -29,6 +29,20 @@ The Pointzi iOS SDK is available under the LGPL license. See the LICENSE file fo
 
 ## Release Notes
 
+Version Number   : 1.1.2
+
+Release Date     : 1-November-2017
+
+1. Fix image margin bug.
+
+Version Number   : 1.1.1
+
+Release Date     : 27-October-2017
+
+1. Show Tip in ANY page.
+2. Structure tip elements.
+3. Text of tip add line-height settings.
+
 Version Number   : 1.1.0
 
 Release Date     : 10-October-2017

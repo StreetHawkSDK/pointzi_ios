@@ -15,7 +15,7 @@
  * License along with this library.
  */
 
-#import "SHTip.h"
+#import "SHTipElement.h"
 
 /**
  Enum for pointzi result. 
