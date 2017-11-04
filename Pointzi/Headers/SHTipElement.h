@@ -27,6 +27,7 @@
 #import "SHTipTargetElement.h"
 #import "SHTipSeriesElement.h"
 #import "SHTipAnimationElement.h"
+#import "SHTipCarouselElement.h"
 
 @interface SHTipElement : SHTipBaseElement
 
@@ -119,6 +120,11 @@
  The coach mark of the tip.
  */
 @property (nonatomic, strong) SHTipCoachmarkElement *coachmark;
+
+/**
+ The carousel of the tip.
+ */
+@property (nonatomic, strong) SHTipCarouselElement *carousel;
 
 /**
  The array of images.
