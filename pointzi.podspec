@@ -30,15 +30,14 @@ Pod::Spec.new do |s|
   		sp.libraries           	= 'sqlite3'
   end
 
-  s.subspec 'PaperOnboarding' do |sp|
+  s.subspec 'Carousel' do |sp|
    		sp.platform             = :ios, '8.0'
    		sp.xcconfig             = { 'OTHER_LDFLAGS' => '$(inherited) -lObjC',
                                     'OTHER_CFLAGS' => '$(inherited) -DNS_BLOCK_ASSERTIONS=1 -DNDEBUG'
                                   }
-  		sp.source_files        	= 'PaperOnboarding/**/*.{h,m}'
-  		sp.public_header_files 	= 'PaperOnboarding/Headers/*.h'
-  		sp.vendored_libraries 	= 'PaperOnboarding/libPaperOnboarding.a'
-        sp.resource_bundles     = {'PaperOnboarding' => ['PaperOnboarding/Assets/**/*']}
+  		sp.source_files        	= 'Carousel/**/*.{h,m}'
+  		sp.public_header_files 	= 'Carousel/Headers/*.h'
+		sp.vendored_libraries   = 'Carousel/libCarousel.a'
   		sp.dependency           'pointzi/Lite'
   end
   

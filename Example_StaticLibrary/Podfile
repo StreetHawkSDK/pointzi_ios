@@ -1,6 +1,6 @@
 
 target 'PointziDemo' do
   
-  pod "pointzi", :path => "../"
+  pod "pointzi/Carousel", :path => "../"
 
 end

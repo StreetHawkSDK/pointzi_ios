@@ -526,7 +526,6 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PointziDemo/Pods-PointziDemo-resources.sh",
 				"$PODS_CONFIGURATION_BUILD_DIR/pointzi/Pointzi.bundle",
-				"$PODS_CONFIGURATION_BUILD_DIR/pointzi/PaperOnboarding.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
