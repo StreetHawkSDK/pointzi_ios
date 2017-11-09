@@ -31,7 +31,7 @@
  Singleton creator of PZApp. Normally use `Pointzi` to represent `[PZApp sharedInstance]`.
  @return Singleton PZApp instance.
  */
-+ (PZApp *)sharedInstance;
++ (nonnull PZApp *)sharedInstance;
 
 
 /**
@@ -39,6 +39,6 @@
  @param url The received deeplinking url. 
  @return If Pointzi can handle this url, return YES; otherwise return NO.
  */
-- (BOOL)openURL:(NSURL *)url;
+- (BOOL)openURL:(nullable NSURL *)url;
 
 @end
