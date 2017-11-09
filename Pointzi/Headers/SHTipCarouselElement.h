@@ -20,6 +20,11 @@
 @interface SHTipCarouselItem : SHTipBaseElement
 
 /**
+ Id of the carousel item.
+ */
+@property (nonatomic, strong) NSString *suid;
+
+/**
  Image of this carousel item. It can be a local image name, or a web download url.
  */
 @property (nonatomic, strong) NSString *imageSource;
