@@ -14,16 +14,31 @@ Pod::Spec.new do |s|
   s.platform            = :ios, '8.0'
   s.requires_arc        = true
   
-  s.xcconfig            = { 'OTHER_LDFLAGS' => '$(inherited) -lObjC', 
-                            'OTHER_CFLAGS' => '$(inherited) -DNS_BLOCK_ASSERTIONS=1 -DNDEBUG'
-                          }  
-                          
-  s.source_files        = 'Pointzi/**/*.{h,m}'    
-  s.public_header_files = 'Pointzi/Headers/*.h'
-  s.vendored_libraries 	= 'Pointzi/libPointzi.a'
-  s.resource_bundles    = {'Pointzi' => ['Pointzi/Assets/**/*']}
+  s.default_subspec 	= 'Lite'
   
-  s.frameworks          = 'CoreTelephony', 'Foundation', 'CoreGraphics', 'UIKit', 'CoreSpotlight'
-  s.libraries           = 'sqlite3'
+  # subspec for users who don't want the optional functions
+  s.subspec 'Lite' do |sp|
+  		sp.platform            	= :ios, '8.0'
+  		sp.xcconfig            	= { 'OTHER_LDFLAGS' => '$(inherited) -lObjC',
+                                    'OTHER_CFLAGS' => '$(inherited) -DNS_BLOCK_ASSERTIONS=1 -DNDEBUG'
+                                  }
+  		sp.source_files        	= 'Pointzi/**/*.{h,m}'
+  		sp.public_header_files 	= 'Pointzi/Headers/*.h'
+  		sp.vendored_libraries   = 'Pointzi/libPointzi.a'
+  		sp.resource_bundles    	= {'Pointzi' => ['Pointzi/Assets/**/*']}
+  		sp.frameworks          	= 'CoreTelephony', 'Foundation', 'CoreGraphics', 'UIKit', 'CoreSpotlight'
+  		sp.libraries           	= 'sqlite3'
+  end
+
+  s.subspec 'Carousel' do |sp|
+   		sp.platform             = :ios, '8.0'
+   		sp.xcconfig             = { 'OTHER_LDFLAGS' => '$(inherited) -lObjC',
+                                    'OTHER_CFLAGS' => '$(inherited) -DNS_BLOCK_ASSERTIONS=1 -DNDEBUG'
+                                  }
+  		sp.source_files        	= 'Carousel/**/*.{h,m}'
+  		sp.public_header_files 	= 'Carousel/Headers/*.h'
+		sp.vendored_libraries   = 'Carousel/libCarousel.a'
+  		sp.dependency           'pointzi/Lite'
+  end
   
 end
