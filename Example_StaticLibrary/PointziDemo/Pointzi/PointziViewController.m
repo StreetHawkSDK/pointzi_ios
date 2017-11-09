@@ -25,7 +25,6 @@
 #import "VarietyViewController.h"
 #import "TabViewController.h"
 #import "CollectionViewController.h"
-#import "PaperOnboardingViewController.h"
 
 @interface PointziViewController ()
 
@@ -126,13 +125,6 @@
         CollectionViewController *vc = [[CollectionViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
-    else if (indexPath.row == 10)
-    {
-        PaperOnboardingViewController *vc = [[PaperOnboardingViewController alloc] initWithNibName:nil bundle:nil];
-        vc.customFeedDelegate = vc;
-        [self.navigationController pushViewController:vc animated:YES];
-    }
-
 }
 
 @end
