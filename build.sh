@@ -9,6 +9,10 @@ rm -Rf $BUILD_OUTPUTS/*
 echo "==============================================================="
 echo "Copy Latest Pointzi Libs"
 
+if [ -z "$POINTZI_LIB_PATH" ];
+   echo "POINTZI_LIB_PATH not set"
+   exit 1
+fi
 cp -r $POINTZI_LIB_PATH/* .
 
 echo "==============================================================="
