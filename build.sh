@@ -10,6 +10,7 @@ echo "==============================================================="
 echo "Copy Latest Pointzi Libs"
 
 if [ -z "$POINTZI_LIB_PATH" ]
+then
    echo "POINTZI_LIB_PATH not set"
    exit 1
 fi
