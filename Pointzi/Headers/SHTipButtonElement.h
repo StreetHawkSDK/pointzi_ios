@@ -90,6 +90,16 @@
 @property (nonatomic, strong) NSString *actionUrl;
 
 /**
+ The button's width, used for carousel item.
+ */
+@property (nonatomic) CGFloat width;
+
+/**
+ The button's height, used for carousel item.
+ */
+@property (nonatomic) CGFloat height;
+
+/**
  Utility function for layout this button element to a UIButton.
  */
 + (void)layoutButton:(UIButton *)button inView:(UIView *)containView withButtonElement:(SHTipButtonElement *)buttonElement;
@@ -103,5 +113,10 @@
  Calculate the button height inside max width.
  */
 + (CGFloat)calculateButtonHeightForElement:(SHTipButtonElement *)buttonElement inside:(CGFloat)maxWidth;
+
+/**
+ Create a button using this element. Used for Carousel.
+ */
+- (UIButton *)createButton;
 
 @end

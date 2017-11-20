@@ -16,6 +16,7 @@
  */
 
 #import "SHTipBaseElement.h"
+#import "SHTipButtonElement.h"
 
 @interface SHTipCarouselItem : SHTipBaseElement
 
@@ -109,6 +110,11 @@
  */
 @property (nonatomic, readonly) UIFont *contentFont;
 
+/**
+ The button on this carousel.
+ */
+@property (nonatomic, strong) SHTipButtonElement *button;
+
 @end
 
 @interface SHTipCarouselElement : SHTipBaseElement
@@ -139,6 +145,7 @@
 @property (nonatomic) CGFloat cornerRadius;
 
 /**
+ Items of the carousel content.
  */
 @property (nonatomic, strong) NSArray<SHTipCarouselItem *> *items;
 
