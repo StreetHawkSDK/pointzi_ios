@@ -28,6 +28,7 @@
 #import "SHTipSeriesElement.h"
 #import "SHTipAnimationElement.h"
 #import "SHTipCarouselElement.h"
+#import "SHTipFeedbackElement.h"
 
 @interface SHTipElement : SHTipBaseElement
 
@@ -125,6 +126,11 @@
  The carousel of the tip.
  */
 @property (nonatomic, strong) SHTipCarouselElement *carousel;
+
+/**
+ The feedback of the tip.
+ */
+@property (nonatomic, strong) SHTipFeedbackElement *feedback;
 
 /**
  The array of images.

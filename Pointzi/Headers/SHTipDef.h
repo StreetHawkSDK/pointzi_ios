@@ -74,6 +74,10 @@ enum SHTipType
      A coach mark page.
      */
     SHTipType_CoachMark = 4,
+    /**
+     A feedback tip.
+     */
+    SHTipType_Feedback = 5,
 };
 typedef enum SHTipType SHTipType;
 
