@@ -31,13 +31,14 @@ The Pointzi iOS SDK is available under the LGPL license. See the LICENSE file fo
 
 Version Number   : 1.2.0
 
-Release Date     : 11-November-2017
+Release Date     : 24-November-2017
 
 1. Support carousel.
 2. Delete local cache in preview mode.
 3. UISegmentedController can selected inner items.
 4. Add x, y, label meta data in super tag.
 5. API add nullability specifier.
+6. Support feedback.
 
 Version Number   : 1.1.2
 
