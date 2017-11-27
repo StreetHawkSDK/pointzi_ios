@@ -29,16 +29,5 @@ Pod::Spec.new do |s|
   		sp.frameworks          	= 'CoreTelephony', 'Foundation', 'CoreGraphics', 'UIKit', 'CoreSpotlight'
   		sp.libraries           	= 'sqlite3'
   end
-
-  s.subspec 'Carousel' do |sp|
-   		sp.platform             = :ios, '8.0'
-   		sp.xcconfig             = { 'OTHER_LDFLAGS' => '$(inherited) -lObjC',
-                                    'OTHER_CFLAGS' => '$(inherited) -DNS_BLOCK_ASSERTIONS=1 -DNDEBUG'
-                                  }
-  		sp.source_files        	= 'Carousel/**/*.{h,m}'
-  		sp.public_header_files 	= 'Carousel/Headers/*.h'
-		sp.vendored_libraries   = 'Carousel/libCarousel.a'
-  		sp.dependency           'pointzi/Lite'
-  end
   
 end
