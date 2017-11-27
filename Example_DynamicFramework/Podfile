@@ -4,6 +4,6 @@ use_frameworks!
 
 target 'PointziDemo' do
   
-  pod "pointzi/Carousel", :path => "../"
+  pod "pointzi", :path => "../"
 
 end
