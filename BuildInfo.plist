@@ -3,8 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>GitBranch</key>
-	<string>IOS1121_GitVersion</string>
+	<string>master</string>
 	<key>GitVersion</key>
-	<string>e1d7a67b</string>
+	<string>8d4fa453</string>
 </dict>
 </plist>
