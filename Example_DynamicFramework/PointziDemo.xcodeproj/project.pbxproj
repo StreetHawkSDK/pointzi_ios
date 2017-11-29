@@ -10,8 +10,6 @@
 		4CBBBC6A1E5847D70004CF56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBBBC691E5847D70004CF56 /* AppDelegate.m */; };
 		4D055E211F8B81DC006E210D /* eg_tulip.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D055E1F1F8B81DC006E210D /* eg_tulip.jpg */; };
 		4D055E221F8B81DC006E210D /* HugsKisses.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D055E201F8B81DC006E210D /* HugsKisses.ttf */; };
-		4D0F17EB1F9E47B5003F154B /* Pods_PointziDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC169DB22542992B26554D1 /* Pods_PointziDemo.framework */; };
-		4D0F17EC1F9E47B5003F154B /* Pods_PointziDemo.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BAC169DB22542992B26554D1 /* Pods_PointziDemo.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D2900D91F590F3200C0DFE1 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D29008F1F590F3200C0DFE1 /* MBProgressHUD.m */; };
 		4D2901111F59128800C0DFE1 /* FeedbackCasesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2901101F59128800C0DFE1 /* FeedbackCasesViewController.m */; };
 		4D2901401F5912DE00C0DFE1 /* BackdropDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2901141F5912DE00C0DFE1 /* BackdropDetailViewController.m */; };
@@ -48,6 +46,7 @@
 		4D2901671F59361200C0DFE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D2901621F59361200C0DFE1 /* LaunchScreen.storyboard */; };
 		4D2901681F59361200C0DFE1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2901631F59361200C0DFE1 /* main.m */; };
 		4D2901691F59361200C0DFE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D2901641F59361200C0DFE1 /* Main.storyboard */; };
+		4D5600C81FCDCC010099CDEC /* Pods_PointziDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5600C91FCDCC010099CDEC /* Pods_PointziDemo.framework */; };
 		4DBB78131F56A5B600197511 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBB77FA1F56A5B600197511 /* SwiftViewController.swift */; };
 		4DBB78141F56A5B600197511 /* SwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DBB77FB1F56A5B600197511 /* SwiftViewController.xib */; };
 		4DBB78151F56A5B600197511 /* InstallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBB77FE1F56A5B600197511 /* InstallViewController.m */; };
@@ -62,20 +61,6 @@
 		4DBB781E1F56A5B600197511 /* LogTagCasesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DBB78101F56A5B600197511 /* LogTagCasesViewController.xib */; };
 		4DBB781F1F56A5B600197511 /* SampleCaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBB78121F56A5B600197511 /* SampleCaseViewController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		4D2901751F59470100C0DFE1 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				4D0F17EC1F9E47B5003F154B /* Pods_PointziDemo.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4CBBBC621E5847D70004CF56 /* PointziDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PointziDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +120,7 @@
 		4D2901621F59361200C0DFE1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D2901631F59361200C0DFE1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4D2901641F59361200C0DFE1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4D5600C91FCDCC010099CDEC /* Pods_PointziDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_PointziDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBB77F91F56A5B600197511 /* PointziDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PointziDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		4DBB77FA1F56A5B600197511 /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		4DBB77FB1F56A5B600197511 /* SwiftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwiftViewController.xib; sourceTree = "<group>"; };
@@ -166,7 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D0F17EB1F9E47B5003F154B /* Pods_PointziDemo.framework in Frameworks */,
+				4D5600C81FCDCC010099CDEC /* Pods_PointziDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +162,7 @@
 		16C269F9C03F5E02EB5D53A4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4D5600C91FCDCC010099CDEC /* Pods_PointziDemo.framework */,
 				4D0F17E41F9E4466003F154B /* libPointzi.a */,
 				BAC169DB22542992B26554D1 /* Pods_PointziDemo.framework */,
 			);
@@ -409,7 +396,6 @@
 				4CBBBC601E5847D70004CF56 /* Resources */,
 				0DDD3CA7B55AA8DAADD9A94A /* [CP] Embed Pods Frameworks */,
 				2BADC5722D50A488E7C3093F /* [CP] Copy Pods Resources */,
-				4D2901751F59470100C0DFE1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -500,11 +486,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PointziDemo/Pods-PointziDemo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/pointzi/pointzi.framework",
+				"${BUILT_PRODUCTS_DIR}/paper-onboarding-pointzi/paper_onboarding_pointzi.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pointzi.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding_pointzi.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -691,7 +677,6 @@
 			baseConfigurationReference = F8633CD139017EB3CFA58185 /* Pods-PointziDemo.debug.xcconfig */;
 			buildSettings = {
 				ALTERNATE_GROUP = "";
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = AG748WC3N7;
 				ENABLE_BITCODE = NO;
@@ -715,7 +700,6 @@
 			baseConfigurationReference = D441326464D605A3B23B599A /* Pods-PointziDemo.release.xcconfig */;
 			buildSettings = {
 				ALTERNATE_GROUP = "";
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = AG748WC3N7;
