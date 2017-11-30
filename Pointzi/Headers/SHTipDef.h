@@ -78,6 +78,10 @@ enum SHTipType
      A feedback tip.
      */
     SHTipType_Feedback = 5,
+    /**
+     A carousel tip.
+     */
+    SHTipType_Carousel = 6,
 };
 typedef enum SHTipType SHTipType;
 
