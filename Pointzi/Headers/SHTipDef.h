@@ -19,7 +19,7 @@
 #define Header_h
 
 #define DEFAULT_TEXT_COLOR          [UIColor blackColor]
-#define DEFAULT_BACKGROUND_COLOR    [UIColor whiteColor]
+#define DEFAULT_BACKGROUND_COLOR    [UIColor clearColor]
 #define DEFAULT_PLACEMENT           SHTipPlacement_Left
 #define DEFAULT_BORDER_COLOR        DEFAULT_BACKGROUND_COLOR
 #define DEFAULT_BOXSHADOW           0
