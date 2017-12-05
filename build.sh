@@ -37,8 +37,8 @@ pushd .
 
 cd Example_StaticLibrary
 
-# install third-party pods
-pod install
+# install/update third-party pods
+pod update
 
 # clean project
 xcodebuild clean -workspace PointziDemo.xcworkspace -scheme PointziDemo -sdk iphoneos -configuration Release
@@ -54,8 +54,8 @@ pushd .
 
 cd Example_DynamicFramework
 
-# install third-party pods
-pod install
+# install/update third-party pods
+pod update
 
 # clean project
 xcodebuild clean -workspace PointziDemo.xcworkspace -scheme PointziDemo -sdk iphoneos -configuration Release
