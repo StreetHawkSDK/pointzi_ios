@@ -29,6 +29,12 @@ The Pointzi iOS SDK is available under the LGPL license. See the LICENSE file fo
 
 ## Release Notes
 
+Version Number   : 1.2.1
+
+Release Date     : 5-December-2017
+
+1. More support carousel.
+
 Version Number   : 1.2.0
 
 Release Date     : 24-November-2017
