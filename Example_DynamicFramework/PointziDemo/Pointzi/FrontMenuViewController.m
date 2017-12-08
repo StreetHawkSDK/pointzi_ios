@@ -19,7 +19,7 @@
 
 @interface FrontMenuViewController ()
 
-@property (nonatomic, strong) NSArray *arrayMenus;
+@property (nonatomic, strong) NSArray *arrayItems;
 
 @end
 
@@ -28,19 +28,37 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Front Menu Cases";
-    self.arrayMenus = @[@"Analytics", @"Growth", @"Push", @"Beacons", @"Geofence", @"Locations", @"Feeds", @"Feedback", @"Install-Info", @"Reset", @"WebView"];
+    self.title = @"Long Table Test Case";
+    NSMutableArray *arraySections = [NSMutableArray array];
+    for (int sectionIndex = 1; sectionIndex <= 5; sectionIndex ++)
+    {
+        NSString *section = [NSString stringWithFormat:@"Section: %d", sectionIndex];
+        NSMutableArray *arrayRows = [NSMutableArray array];
+        for (int rowIndex = 1; rowIndex <= 10; rowIndex ++)
+        {
+            [arrayRows addObject:[NSString stringWithFormat:@"%d - %d", sectionIndex, rowIndex]];
+        }
+        [arraySections addObject:@{@"section": section,
+                                   @"rows": arrayRows}];
+    }
+    self.arrayItems = arraySections;
     [self.tableView reloadData];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return self.arrayItems.count;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return self.arrayItems[section][@"section"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.arrayMenus.count;
+    NSArray *arrayRows = self.arrayItems[section][@"rows"];
+    return arrayRows.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -51,8 +69,11 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    cell.textLabel.text = self.arrayMenus[indexPath.row];
+    NSArray *arrayRows = self.arrayItems[indexPath.section][@"rows"];
+    cell.textLabel.text = arrayRows[indexPath.row];
     return cell;
 }
 
 @end
+
+
