@@ -44,13 +44,19 @@
 @property (nonatomic, readonly) NSIndexPath *indexPath;
 
 /**
+ Keep a reference to its parent element, a tip or a tip series. It will be used when find target view.
+ */
+@property (nonatomic, weak) id parentElement;
+
+/**
  Whether the target matches the vc.
  */
 - (BOOL)matchVC:(UIViewController *)vc;
 
 /**
  Find target view matching this element.
+ 
  */
-- (UIView *)findTargetInViewController:(UIViewController *)ctrl forTipPlacement:(SHTipPlacement)tipPlacement;
+- (UIView *)findTargetInViewController:(UIViewController *)ctrl;
 
 @end
