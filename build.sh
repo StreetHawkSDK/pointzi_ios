@@ -44,7 +44,7 @@ pod update
 xcodebuild clean -workspace PointziDemo.xcworkspace -scheme PointziDemo -sdk iphoneos -configuration Release
 
 # archive app
-xcodebuild archive -workspace PointziDemo.xcworkspace -scheme PointziDemo -archivePath $BUILD_OUTPUTS/PZStatic.xcarchive
+xcodebuild archive -workspace PointziDemo.xcworkspace -scheme PointziDemo -archivePath $BUILD_OUTPUTS/PZStatic.xcarchive -allowProvisioningUpdates
 
 popd
 
@@ -61,7 +61,7 @@ pod update
 xcodebuild clean -workspace PointziDemo.xcworkspace -scheme PointziDemo -sdk iphoneos -configuration Release
 
 # archive app
-xcodebuild archive -workspace PointziDemo.xcworkspace -scheme PointziDemo -archivePath $BUILD_OUTPUTS/PZDynamic.xcarchive
+xcodebuild archive -workspace PointziDemo.xcworkspace -scheme PointziDemo -archivePath $BUILD_OUTPUTS/PZDynamic.xcarchive -allowProvisioningUpdates
 
 popd
 
