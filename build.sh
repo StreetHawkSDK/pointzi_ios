@@ -37,14 +37,7 @@ pushd .
 
 cd Example_StaticLibrary
 
-# install/update third-party pods
-pod update
-
-# clean project
-xcodebuild clean -workspace PointziDemo.xcworkspace -scheme PointziDemo -sdk iphoneos -configuration Release
-
-# archive app
-xcodebuild archive -workspace PointziDemo.xcworkspace -scheme PointziDemo -archivePath $BUILD_OUTPUTS/PZStatic.xcarchive -allowProvisioningUpdates
+fastlane gym --scheme PointziDemo --export_method "ad-hoc" --output_directory "$BUILD_OUTPUTS" --output_name "PZStatic.ipa" --clean true
 
 popd
 
