@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   		sp.vendored_libraries   = 'Pointzi/libPointzi.a'
   		sp.resource_bundles    	= {'Pointzi' => ['Pointzi/Assets/**/*']}
   		sp.frameworks          	= 'CoreTelephony', 'Foundation', 'CoreGraphics', 'UIKit', 'CoreSpotlight'
-  		sp.libraries           	= 'sqlite3'
+  		sp.libraries           	= 'sqlite3', 'xml2'
   end
   
 end
