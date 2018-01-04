@@ -37,14 +37,7 @@ pushd .
 
 cd Example_StaticLibrary
 
-# install/update third-party pods
-pod update
-
-# clean project
-xcodebuild clean -workspace PointziDemo.xcworkspace -scheme PointziDemo -sdk iphoneos -configuration Release
-
-# archive app
-xcodebuild archive -workspace PointziDemo.xcworkspace -scheme PointziDemo -archivePath $BUILD_OUTPUTS/PZStatic.xcarchive -allowProvisioningUpdates
+fastlane gym --scheme PointziDemo --export_method "ad-hoc" --output_directory "$BUILD_OUTPUTS" --output_name "PZStatic.ipa" --clean true
 
 popd
 
@@ -54,14 +47,7 @@ pushd .
 
 cd Example_DynamicFramework
 
-# install/update third-party pods
-pod update
-
-# clean project
-xcodebuild clean -workspace PointziDemo.xcworkspace -scheme PointziDemo -sdk iphoneos -configuration Release
-
-# archive app
-xcodebuild archive -workspace PointziDemo.xcworkspace -scheme PointziDemo -archivePath $BUILD_OUTPUTS/PZDynamic.xcarchive -allowProvisioningUpdates
+fastlane gym --scheme PointziDemo --export_method "ad-hoc" --output_directory "$BUILD_OUTPUTS" --output_name "PZDynamic.ipa" --clean true
 
 popd
 
@@ -73,12 +59,12 @@ popd
                     -repository_url=https://github.com/StreetHawkSDK/ios \
                     -api_token=$HOCKEYAPP_TOKEN \
                     -app_id=$HOCKEYAPP_APPID_DYNAMIC \
-                    $BUILD_OUTPUTS/PZDynamic.xcarchive
+                    $BUILD_OUTPUTS/PZDynamic.ipa
 /usr/local/bin/puck -submit=auto -download=true -notes="$(git log -1)" \
                     -notes_type=markdown \
                     -source_path=$(pwd) \
                     -repository_url=https://github.com/StreetHawkSDK/ios \
                     -api_token=$HOCKEYAPP_TOKEN \
                     -app_id=$HOCKEYAPP_APPID_STATIC \
-                    $BUILD_OUTPUTS/PZStatic.xcarchive
+                    $BUILD_OUTPUTS/PZStatic.ipa
 
