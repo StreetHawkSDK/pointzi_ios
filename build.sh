@@ -59,12 +59,12 @@ popd
                     -repository_url=https://github.com/StreetHawkSDK/ios \
                     -api_token=$HOCKEYAPP_TOKEN \
                     -app_id=$HOCKEYAPP_APPID_DYNAMIC \
-                    $BUILD_OUTPUTS/PZDynamic.xcarchive
+                    $BUILD_OUTPUTS/PZDynamic.ipa
 /usr/local/bin/puck -submit=auto -download=true -notes="$(git log -1)" \
                     -notes_type=markdown \
                     -source_path=$(pwd) \
                     -repository_url=https://github.com/StreetHawkSDK/ios \
                     -api_token=$HOCKEYAPP_TOKEN \
                     -app_id=$HOCKEYAPP_APPID_STATIC \
-                    $BUILD_OUTPUTS/PZStatic.xcarchive
+                    $BUILD_OUTPUTS/PZStatic.ipa
 
