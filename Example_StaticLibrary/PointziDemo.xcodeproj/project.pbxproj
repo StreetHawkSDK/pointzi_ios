@@ -720,8 +720,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.streethawk.PZStatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c00d87ef-cb3f-4cc2-a6ea-d2bad47d8b80";
-				PROVISIONING_PROFILE_SPECIFIER = "Adhoc - Pointzi Pod Static Library Sample App";
+				PROVISIONING_PROFILE = "0d5776cf-b4c6-4548-b512-696de3d1dfac";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.streethawk.PZStatic";
 				SWIFT_OBJC_BRIDGING_HEADER = "PointziDemo/Swift/PointziDemo-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;

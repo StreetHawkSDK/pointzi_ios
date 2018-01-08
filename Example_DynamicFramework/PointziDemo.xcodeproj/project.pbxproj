@@ -711,8 +711,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.streethawk.PZDynamic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6e9fb5dd-98ef-4eb4-90d8-23d5bb768811";
-				PROVISIONING_PROFILE_SPECIFIER = "Adhoc - Pointzi Pod Dynamic Framework Sample App";
+				PROVISIONING_PROFILE = "41807c9c-cb64-429f-b3aa-c4ca028827ce";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.streethawk.PZDynamic";
 				SWIFT_OBJC_BRIDGING_HEADER = "PointziDemo/Swift/PointziDemo-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
