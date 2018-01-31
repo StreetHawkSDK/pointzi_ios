@@ -31,6 +31,8 @@ build_time=$(date)
 echo "==============================================================="
 echo "Build Pointzi demos"
 
+export PATH="$HOME/.fastlane/bin:$PATH"
+
 # ------------------- build PZStatic ------------------------
 
 pushd .
