@@ -33,7 +33,7 @@ echo "Build Pointzi demos"
 
 export PATH="$HOME/.fastlane/bin:$PATH"
 
-security unlock-keychain $BUILD_PASSWORD
+security unlock-keychain -p $BUILD_PASSWORD "/Users/hawk/Library/Keychains/login.keychain-db"
 
 # ------------------- build PZStatic ------------------------
 
