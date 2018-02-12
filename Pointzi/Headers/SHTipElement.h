@@ -48,6 +48,11 @@
 @property (nonatomic) SHTipType tipType;
 
 /**
+ The view string of current tip.
+ */
+@property (nonatomic, strong) NSString *view;
+
+/**
  Target of current tip.
  */
 @property (nonatomic, strong) SHTipTargetElement *target;
