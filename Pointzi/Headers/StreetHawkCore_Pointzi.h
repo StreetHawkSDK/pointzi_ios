@@ -57,5 +57,4 @@ FOUNDATION_EXPORT const unsigned char StreetHawkCore_PointziVersionString[];
 #import "SHTipCarouselElement.h"
 #import "SHTipFeedbackElement.h"
 #import "SHPointziApi.h"
-#import "SHPointzi.h" //xamarin header to avoid umbrella warning
 
