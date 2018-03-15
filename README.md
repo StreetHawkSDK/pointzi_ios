@@ -28,6 +28,11 @@ support@pointzi.com
 The Pointzi iOS SDK is available under the LGPL license. See the LICENSE file for more info.
 
 ## Release Notes
+Version Number   : 1.3.0
+
+Release Date     : 14-March-2018
+
+1. Support using segment.io sending traits to tag on streethawk
 
 Version Number   : 1.2.2
 
