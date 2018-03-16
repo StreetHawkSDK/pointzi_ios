@@ -28,6 +28,13 @@ support@pointzi.com
 The Pointzi iOS SDK is available under the LGPL license. See the LICENSE file for more info.
 
 ## Release Notes
+Version Number   : 1.3.1
+
+Release Date     : 16-March-2018
+
+1. Fix bug SVG lib now generate with full bitcode; 
+2. Enable bitcode of Pointzi demo Apps, and the same build error of customer’s show up.
+
 Version Number   : 1.3.0
 
 Release Date     : 14-March-2018
