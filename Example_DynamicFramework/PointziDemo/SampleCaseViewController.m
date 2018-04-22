@@ -62,7 +62,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.arraySampleCasesTitle.count + 2;
+    return self.arraySampleCasesTitle.count + 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -109,7 +109,7 @@
         UITextField *textToken = cell.contentView.subviews[0];
         textToken.text = [[NSUserDefaults standardUserDefaults] objectForKey:SH_INSTALL_TOKEN];
     }
-    else
+    else if (indexPath.row - 2 < self.arraySampleCasesTitle.count)
     {
         static NSString *cellIdentifier = @"SampleCaseModuleCell";
         cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -120,12 +120,26 @@
         cell.textLabel.text = self.arraySampleCasesTitle[indexPath.row - 2];
         cell.textLabel.textColor = [UIColor darkTextColor];
     }
+    else
+    {
+        static NSString *cellIdentifier = @"VersionCell";
+        cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        if (cell == nil)
+        {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        }
+        cell.textLabel.text = StreetHawk.clientVersion;
+        cell.textLabel.textColor = [UIColor lightGrayColor];
+        cell.textLabel.font = [UIFont systemFontOfSize:10];
+    }
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 0 || indexPath.row == 1)
+    if (indexPath.row == 0
+        || indexPath.row == 1
+        || indexPath.row == self.arraySampleCasesTitle.count + 2)
     {
         return; //host server
     }
