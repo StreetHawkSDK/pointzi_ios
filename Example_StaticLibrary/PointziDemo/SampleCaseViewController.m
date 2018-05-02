@@ -128,7 +128,10 @@
         {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         }
-        cell.textLabel.text = StreetHawk.clientVersion;
+        NSString *clientVersion = [NSString stringWithFormat:@"%@ (%@)",
+                                   [[NSBundle mainBundle] infoDictionary][@"CFBundleShortVersionString"],
+                                   [[NSBundle mainBundle] infoDictionary][@"CFBundleVersion"]];
+        cell.textLabel.text = clientVersion;
         cell.textLabel.textColor = [UIColor lightGrayColor];
         cell.textLabel.font = [UIFont systemFontOfSize:10];
     }
