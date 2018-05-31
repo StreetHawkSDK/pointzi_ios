@@ -40,7 +40,8 @@ security unlock-keychain -p $BUILD_PASSWORD "/Users/hawk/Library/Keychains/login
 pushd .
 
 cd Example_StaticLibrary
-
+pod install
+pod update
 fastlane gym --scheme PointziDemo --export_method "ad-hoc" --output_directory "$BUILD_OUTPUTS" --output_name "PZStatic.ipa" --clean true
 
 popd
@@ -50,7 +51,8 @@ popd
 pushd .
 
 cd Example_DynamicFramework
-
+pod install
+pod update
 fastlane gym --scheme PointziDemo --export_method "ad-hoc" --output_directory "$BUILD_OUTPUTS" --output_name "PZDynamic.ipa" --clean true
 
 popd
