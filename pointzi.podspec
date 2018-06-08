@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                = "pointzi"
-  s.version             = "1.3.1"
+  s.version             = "1.3.2-beta+20180606162459"
   s.summary             = "Pointzi module."
   s.description         = <<-DESC
                             Pointzi is an excellent SDK for you to create an experiment.
@@ -13,9 +13,9 @@ Pod::Spec.new do |s|
   s.source              = { :git => 'https://github.com/StreetHawkSDK/pointzi_ios.git', :tag => s.version.to_s, :submodules => true }
   s.platform            = :ios, '8.0'
   s.requires_arc        = true
-  
+
   s.default_subspec 	= 'Lite'
-  
+
   # subspec for users who don't want the optional functions
   s.subspec 'Lite' do |sp|
   		sp.platform            	= :ios, '8.0'
@@ -29,5 +29,5 @@ Pod::Spec.new do |s|
   		sp.frameworks          	= 'CoreTelephony', 'Foundation', 'CoreGraphics', 'UIKit', 'CoreSpotlight'
   		sp.libraries           	= 'sqlite3', 'xml2'
   end
-  
+
 end
