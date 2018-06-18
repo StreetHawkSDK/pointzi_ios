@@ -42,6 +42,7 @@ pushd .
 cd Example_StaticLibrary
 pod install
 pod update
+fastlane match adhoc
 fastlane gym --scheme PointziDemo --export_method "ad-hoc" --output_directory "$BUILD_OUTPUTS" --output_name "PZStatic.ipa" --clean true
 
 popd
@@ -53,6 +54,7 @@ pushd .
 cd Example_DynamicFramework
 pod install
 pod update
+fastlane match adhoc
 fastlane gym --scheme PointziDemo --export_method "ad-hoc" --output_directory "$BUILD_OUTPUTS" --output_name "PZDynamic.ipa" --clean true
 
 popd

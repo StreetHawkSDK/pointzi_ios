@@ -403,7 +403,6 @@
 				4CBBBC5E1E5847D70004CF56 /* Sources */,
 				4CBBBC5F1E5847D70004CF56 /* Frameworks */,
 				4CBBBC601E5847D70004CF56 /* Resources */,
-				0DDD3CA7B55AA8DAADD9A94A /* [CP] Embed Pods Frameworks */,
 				2BADC5722D50A488E7C3093F /* [CP] Copy Pods Resources */,
 				4D2901751F59470100C0DFE1 /* Embed Frameworks */,
 			);
@@ -489,21 +488,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0DDD3CA7B55AA8DAADD9A94A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PointziDemo/Pods-PointziDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2BADC5722D50A488E7C3093F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -511,11 +495,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PointziDemo/Pods-PointziDemo-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/pointzi/Pointzi.bundle,
+				"${PODS_CONFIGURATION_BUILD_DIR}/pointzi/Pointzi.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Pointzi.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
