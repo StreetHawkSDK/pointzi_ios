@@ -73,6 +73,12 @@ popd
                     $BUILD_OUTPUTS/PZStatic.ipa
 
 # ---------------------- upload to npm ---------------------
+if [ ! -z $GIT_USERNAME ]; then
+    git config user.name $GIT_USERNAME
+fi
+if [ ! -z $GIT_EMAIL ]; then
+    git config user.email $GIT_EMAIL
+fi
 if [ ! -z $COMMIT_MESSAGE ]; then
     git add BuildInfo.plist
     git add Pointzi
