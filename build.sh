@@ -72,3 +72,13 @@ popd
                     -app_id=$HOCKEYAPP_APPID_STATIC \
                     $BUILD_OUTPUTS/PZStatic.ipa
 
+# ---------------------- upload to npm ---------------------
+if [ ! -z $COMMIT_MESSAGE ]; then
+    git add BuildInfo.plist
+    git add Pointzi
+    git add Carousel
+    git commit -m $COMMIT_MESSAGE
+    pod spec lint "pointzi.podspec" --verbose
+    pod trunk push pointzi.podspec --allow-warnings 
+fi
+    
