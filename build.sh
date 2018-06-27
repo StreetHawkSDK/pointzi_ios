@@ -77,19 +77,19 @@ popd
                     $BUILD_OUTPUTS/PZStatic.ipa
 
 # ---------------------- upload to npm ---------------------
-if [ ! -z $GIT_USERNAME ]; then
-    git config user.name $GIT_USERNAME
+if [ ! -z "$GIT_USERNAME" ]; then
+    git config user.name "$GIT_USERNAME"
 fi
-if [ ! -z $GIT_EMAIL ]; then
-    git config user.email $GIT_EMAIL
+if [ ! -z "$GIT_EMAIL" ]; then
+    git config user.email "$GIT_EMAIL"
 fi
-if [ ! -z $COMMIT_MESSAGE ]; then
+if [ ! -z "$COMMIT_MESSAGE" ]; then
     sed "s/\(^\s*s.version\s*= \).*$/\1$(cat version)/g" -i pointzi.podspec
     git add pointzi.podspec
     git add BuildInfo.plist
     git add Pointzi
     git add Carousel
-    git commit -m $COMMIT_MESSAGE
+    git commit -m "$COMMIT_MESSAGE"
     pod spec lint "pointzi.podspec" --verbose
     pod trunk push pointzi.podspec --allow-warnings 
 fi
