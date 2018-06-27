@@ -80,6 +80,8 @@ if [ ! -z $GIT_EMAIL ]; then
     git config user.email $GIT_EMAIL
 fi
 if [ ! -z $COMMIT_MESSAGE ]; then
+    sed "s/\(^\s*s.version\s*= \).*$/\1$(cat version)/g" -i pointzi.podspec
+    git add pointzi.podspec
     git add BuildInfo.plist
     git add Pointzi
     git add Carousel
