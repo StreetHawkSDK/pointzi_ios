@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                = "pointzi"
-  s.version             = "1.3.2-beta+20180608185659"
+  s.version             = "1.3.2-beta+20180626191551"
   s.summary             = "Pointzi module."
   s.description         = <<-DESC
                             Pointzi is an excellent SDK for you to create an experiment.
