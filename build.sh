@@ -84,7 +84,7 @@ if [ ! -z "$GIT_EMAIL" ]; then
     git config user.email "$GIT_EMAIL"
 fi
 if [ ! -z "$COMMIT_MESSAGE" ]; then
-    sed -i .bak 's/\(s.version[[:space:]]*=[[:space:]]"\).*/\1$(cat version)"/g' pointzi.podspec
+    sed -i .bak 's/\(s.version[[:space:]]*=[[:space:]]"\).*/\1'"$(cat version)"'"/g' pointzi.podspec
     git add pointzi.podspec
     git add BuildInfo.plist
     git add Pointzi
