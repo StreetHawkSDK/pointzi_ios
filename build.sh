@@ -76,7 +76,7 @@ popd
                     -app_id=$HOCKEYAPP_APPID_STATIC \
                     $BUILD_OUTPUTS/PZStatic.ipa
 
-# ---------------------- upload to npm ---------------------
+# ---------------------- upload to pod ---------------------
 if [ ! -z "$GIT_USERNAME" ]; then
     git config user.name "$GIT_USERNAME"
 fi
@@ -90,6 +90,8 @@ if [ ! -z "$COMMIT_MESSAGE" ]; then
     git add Pointzi
     git add Carousel
     git commit -m "$COMMIT_MESSAGE"
+    git tag "$(cat version)"
+    git push origin --follow-tags
     pod spec lint "pointzi.podspec" --verbose
     pod trunk push pointzi.podspec --allow-warnings
 fi
