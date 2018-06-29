@@ -89,6 +89,8 @@ if [ ! -z "$COMMIT_MESSAGE" ]; then
     git add BuildInfo.plist
     git add Pointzi
     git add Carousel
+    git add "Example_DynamicFramework/PointziDemo/Supporting Files/Info.plist"
+    git add "Example_StaticLibrary/PointziDemo/Supporting Files/Info.plist"
     git commit -m "$COMMIT_MESSAGE"
     git tag "$(cat version)"
     git push origin
