@@ -92,7 +92,7 @@ if [ ! -z "$COMMIT_MESSAGE" ]; then
     git add "Example_DynamicFramework/PointziDemo/Supporting Files/Info.plist"
     git add "Example_StaticLibrary/PointziDemo/Supporting Files/Info.plist"
     git commit -m "$COMMIT_MESSAGE"
-    git tag "$(cat version)"
+    git tag --force "$(cat version)"
     git push origin
     git push origin --tags
     pod spec lint "pointzi.podspec" --verbose
