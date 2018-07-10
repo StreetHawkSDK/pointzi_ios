@@ -94,7 +94,7 @@ if [ ! -z "$COMMIT_MESSAGE" ]; then
     git commit -m "$COMMIT_MESSAGE"
     git tag --force "$(cat version)"
     git push origin
-    git push origin --tags
+    git push origin --tags -f
     pod spec lint "pointzi.podspec" --verbose
     pod trunk push pointzi.podspec --allow-warnings
 fi
