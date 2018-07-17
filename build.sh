@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/bash -x
 set -e
 echo "Build started on $(date)"
 
