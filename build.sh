@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/bash -x
 set -e
 echo "Build started on $(date)"
 
@@ -92,7 +92,7 @@ if [ ! -z "$COMMIT_MESSAGE" ]; then
     git add "Example_DynamicFramework/PointziDemo/Supporting Files/Info.plist"
     git add "Example_StaticLibrary/PointziDemo/Supporting Files/Info.plist"
     git commit -m "$COMMIT_MESSAGE"
-    git tag --force "$(cat version)"
+    git tag "$(cat version)" || true
     git push origin
     git push origin --tags -f
     pod spec lint "pointzi.podspec" --verbose
