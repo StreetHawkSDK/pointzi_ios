@@ -84,13 +84,15 @@ if [ ! -z "$GIT_EMAIL" ]; then
     git config user.email "$GIT_EMAIL"
 fi
 if [ ! -z "$COMMIT_MESSAGE" ]; then
-    pod_version=$(cat version)
-    if [[ $pod_version =~ ^[0-9]+\.[0-9]+\.[0-9]+-release$ ]]; then
-        release_version=$([[ $pod_version =~ ^([0-9]+\.[0-9]+\.[0-9]+)-release$ ]] && echo ${BASH_REMATCH[1]})
-    elif [[ $pod_version =~ ^[0-9]+\.[0-9]+\.[0-9]+.*$ ]]; then
-        release_version=$([[ $pod_version =~ ^([0-9]+\.[0-9]+\.[0-9]+).*$ ]] && echo ${BASH_REMATCH[1]})-beta+$(date +%s)
+    head_version=$(git tag -l --points-at HEAD | grep -v '^_')
+    if [ -z $head_version ]; then
+        release_version=$(git semver get | python -c 'import semver, sys;print(semver.bump_patch(sys.stdin.read()))')-beta+$(date +%s)
+    elif [[ $head_version =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+        release_version=$head_version
+    elif [[ $head_version =~ ^[0-9]+\.[0-9]+\.[0-9]+-beta$ ]]; then
+        release_version=$head_version+$(date +%s)
     else
-        echo "pod version number fetched from source repo is wrong, please check!"
+        echo "head tag version fetched from source repo is neither a beta version nor a release version, please check!"
     fi
     sed -i .bak 's/\(s.version[[:space:]]*=[[:space:]]"\).*/\1'"$release_version"'"/g' pointzi.podspec
     git add pointzi.podspec
