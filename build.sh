@@ -84,7 +84,15 @@ if [ ! -z "$GIT_EMAIL" ]; then
     git config user.email "$GIT_EMAIL"
 fi
 if [ ! -z "$COMMIT_MESSAGE" ]; then
-    sed -i .bak 's/\(s.version[[:space:]]*=[[:space:]]"\).*/\1'"$(cat version)"'"/g' pointzi.podspec
+    pod_version=$(cat version)
+    if [[ $pod_version =~ ^[0-9]+\.[0-9]+\.[0-9]+-release$ ]]; then
+        release_version=$([[ $pod_version =~ ^([0-9]+\.[0-9]+\.[0-9]+)-release$ ]] && echo ${BASH_REMATCH[1]})
+    elif [[ $pod_version =~ ^[0-9]+\.[0-9]+\.[0-9]+.*$ ]]; then
+        release_version=$([[ $pod_version =~ ^([0-9]+\.[0-9]+\.[0-9]+).*$ ]] && echo ${BASH_REMATCH[1]})-beta+$(date +%s)
+    else
+        echo "pod version number fetched from source repo is wrong, please check!"
+    fi
+    sed -i .bak 's/\(s.version[[:space:]]*=[[:space:]]"\).*/\1'"$release_version"'"/g' pointzi.podspec
     git add pointzi.podspec
     git add BuildInfo.plist
     git add Pointzi
@@ -92,9 +100,9 @@ if [ ! -z "$COMMIT_MESSAGE" ]; then
     git add "Example_DynamicFramework/PointziDemo/Supporting Files/Info.plist"
     git add "Example_StaticLibrary/PointziDemo/Supporting Files/Info.plist"
     git commit -m "$COMMIT_MESSAGE"
-    git tag "$(cat version)" || true
+    git tag $release_version
     git push origin
-    git push origin --tags -f
+    git push origin --tags
     pod spec lint "pointzi.podspec" --verbose
     pod trunk push pointzi.podspec --allow-warnings
 fi
