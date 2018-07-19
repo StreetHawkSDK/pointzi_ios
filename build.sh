@@ -84,7 +84,24 @@ if [ ! -z "$GIT_EMAIL" ]; then
     git config user.email "$GIT_EMAIL"
 fi
 if [ ! -z "$COMMIT_MESSAGE" ]; then
-    sed -i .bak 's/\(s.version[[:space:]]*=[[:space:]]"\).*/\1'"$(cat version)"'"/g' pointzi.podspec
+    head_version=$(git -C $POINTZI_LIB_PATH tag -l --points-at HEAD | grep -v '^_')
+    current_version=$(git -C $POINTZI_LIB_PATH describe --tags --abbrev=0)
+    # if current recheable tag version include beta as a suffix, then do a beta release with the same version number
+    if [[ $current_version =~ ^[0-9]+\.[0-9]+\.[0-9]+-beta.*$ ]]; then
+        release_version=$([[ $current_version =~ ^([0-9]+\.[0-9]+\.[0-9]+-beta).*$ ]] && echo ${BASH_REMATCH[1]})+$(date +%s)
+    # if current recheable tag version does not include beta as a suffix but head version is empty,
+    # then bump up patch number and do a beta release
+    elif [ -z $head_version ]; then
+        release_version=$(git -C $POINTZI_LIB_PATH describe --tags --abbrev=0 | python -c 'import semver, sys;print(semver.bump_patch(sys.stdin.read()))')-beta+$(date +%s)
+    # if current recheable tag version does not include beta as a suffix and head version is not empty,
+    # then check if the version number adhere to semver x.x.x if so, do a formal release
+    elif [[ $head_version =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+        release_version=$head_version
+    else
+        echo "head tag version fetched from source repo is neither a beta version nor release version, please check!"
+        exit 128
+    fi
+    sed -i .bak 's/\(s.version[[:space:]]*=[[:space:]]"\).*/\1'"$release_version"'"/g' pointzi.podspec
     git add pointzi.podspec
     git add BuildInfo.plist
     git add Pointzi
@@ -92,7 +109,7 @@ if [ ! -z "$COMMIT_MESSAGE" ]; then
     git add "Example_DynamicFramework/PointziDemo/Supporting Files/Info.plist"
     git add "Example_StaticLibrary/PointziDemo/Supporting Files/Info.plist"
     git commit -m "$COMMIT_MESSAGE"
-    git tag "$(cat version)" || true
+    git tag $release_version
     git push origin
     git push origin --tags
     pod spec lint "pointzi.podspec" --verbose
