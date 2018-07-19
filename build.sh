@@ -84,7 +84,7 @@ if [ ! -z "$GIT_EMAIL" ]; then
     git config user.email "$GIT_EMAIL"
 fi
 if [ ! -z "$COMMIT_MESSAGE" ]; then
-    head_version=$(git -C $POINTZI_LIB_PATH tag -l --points-at HEAD | grep -v '^_')
+    head_version=$(git -C $POINTZI_LIB_PATH tag -l --points-at HEAD | grep -v '1'||:)
     current_version=$(git -C $POINTZI_LIB_PATH describe --tags --abbrev=0)
     # if current recheable tag version include beta as a suffix, then do a beta release with the same version number
     if [[ $current_version =~ ^[0-9]+\.[0-9]+\.[0-9]+-beta.*$ ]]; then
