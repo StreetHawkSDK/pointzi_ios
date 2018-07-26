@@ -41,7 +41,7 @@ pushd .
 
 cd Example_StaticLibrary
 pod install
-fastlane beta
+fastlane beta HOCKEYAPP_TOKEN:$HOCKEYAPP_TOKEN
 
 popd
 
@@ -51,7 +51,7 @@ pushd .
 
 cd Example_DynamicFramework
 pod install
-fastlane beta
+fastlane beta HOCKEYAPP_TOKEN:$HOCKEYAPP_TOKEN
 
 popd
 # ---------------------- upload to pod ---------------------
