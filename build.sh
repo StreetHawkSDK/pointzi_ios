@@ -41,9 +41,7 @@ pushd .
 
 cd Example_StaticLibrary
 pod install
-pod update
-fastlane match adhoc --force_for_new_devices
-fastlane gym --scheme PointziDemo --export_method "ad-hoc" --output_directory "$BUILD_OUTPUTS" --output_name "PZStatic.ipa" --clean true
+fastlane beta
 
 popd
 
@@ -53,29 +51,9 @@ pushd .
 
 cd Example_DynamicFramework
 pod install
-pod update
-fastlane match adhoc --force_for_new_devices
-fastlane gym --scheme PointziDemo --export_method "ad-hoc" --output_directory "$BUILD_OUTPUTS" --output_name "PZDynamic.ipa" --clean true
+fastlane beta
 
 popd
-
-# ---------------------- upload to hockeyapp ---------------------
-
-/usr/local/bin/puck -submit=auto -download=true -notes="$(git log -1)" \
-                    -notes_type=markdown \
-                    -source_path=$(pwd) \
-                    -repository_url=https://github.com/StreetHawkSDK/ios \
-                    -api_token=$HOCKEYAPP_TOKEN \
-                    -app_id=$HOCKEYAPP_APPID_DYNAMIC \
-                    $BUILD_OUTPUTS/PZDynamic.ipa
-/usr/local/bin/puck -submit=auto -download=true -notes="$(git log -1)" \
-                    -notes_type=markdown \
-                    -source_path=$(pwd) \
-                    -repository_url=https://github.com/StreetHawkSDK/ios \
-                    -api_token=$HOCKEYAPP_TOKEN \
-                    -app_id=$HOCKEYAPP_APPID_STATIC \
-                    $BUILD_OUTPUTS/PZStatic.ipa
-
 # ---------------------- upload to pod ---------------------
 if [ ! -z "$GIT_USERNAME" ]; then
     git config user.name "$GIT_USERNAME"
