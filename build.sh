@@ -112,6 +112,9 @@ if [ ! -z "$COMMIT_MESSAGE" ]; then
     git tag $release_version
     git push origin
     git push origin --tags
-    pod spec lint "pointzi.podspec" --verbose
-    pod trunk push pointzi.podspec --allow-warnings
+    # only when it is a formal release version, then push to pod trunk
+    if [[ $release_version =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+        pod spec lint "pointzi.podspec" --verbose
+        pod trunk push pointzi.podspec --allow-warnings
+    fi
 fi
