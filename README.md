@@ -29,6 +29,19 @@ The Pointzi iOS SDK is available under the LGPL license. See the LICENSE file fo
 
 ## Release Notes
 
+Version Number   : 1.3.3
+
+Release Date     : 10-August-2018
+
+* fixed a bug which happen when device switch between landscape and portrait
+* fixed a bug which may duplicate a shown tip
+* add more recognizable widgets when doing snapshot
+* fixed a crash when a tip place off content
+* fixed a crash when add a button to visaul effect view
+* image behaviour changed to be more reasonable
+* fixed a bug which may show a dismissed tip again
+* replaced default placeholder image with a more suitable one
+
 Version Number   : 1.3.2
 
 Release Date     : 04-July-2018
