@@ -33,11 +33,11 @@ Version Number   : 1.3.3
 
 Release Date     : 10-August-2018
 
-* fixed a bug which happen when device switch between landscape and portrait
-* fixed a bug which may duplicate a shown tip
-* add more recognizable widgets when doing snapshot
+* fixed a bug that happens when device switches between landscape and portrait
+* fixed a bug that caused tips to be displayed twice
+* improved algorithm to recognize most widgets when doing snapshot
 * fixed a crash when a tip place off content
-* fixed a crash when add a button to visaul effect view
+* fixed a crash when user adds a button to viual effect view
 * image behaviour changed to be more reasonable
 * fixed a bug which may show a dismissed tip again
 * replaced default placeholder image with a more suitable one
