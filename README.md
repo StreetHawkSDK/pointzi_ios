@@ -28,6 +28,18 @@ support@pointzi.com
 The Pointzi iOS SDK is available under the LGPL license. See the LICENSE file for more info.
 
 ## Release Notes
+Version Number   : 1.3.5
+
+Release Date     : 13-September-2018
+
+* add a new launcher, now tips can be triggerred by "Click" on a widget
+* add new integration methods, now pointzi can be integrated without CocoaPod
+
+Version Number   : 1.3.4
+
+Release Date     : 27-August-2018
+
+* adjusted image layering order to follow design of dashboard
 
 Version Number   : 1.3.3
 
